@@ -1,0 +1,47 @@
+<!-- beans.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="wheel" class="com.xset.my.xsetspring.data.Wheel">
+        <constructor-arg value="Continental"/>
+    </bean>
+
+    <bean id="starter" class="com.xset.my.xsetspring.data.Starter">
+        <constructor-arg value="VAZ"/>
+    </bean>
+
+    <bean id="engine" class="com.xset.my.xsetspring.data.Engine">
+        <constructor-arg ref="starter"/>
+    </bean>
+
+    <bean id="sparkPlug" class="com.xset.my.xsetspring.data.SparkPlug">
+        <constructor-arg value="Spark1"/>
+    </bean>
+
+    <bean id="accumulator" class="com.xset.my.xsetspring.data.Accumulator">
+        <constructor-arg value="Super"/>
+    </bean>
+
+    <bean id="hinge" class="com.xset.my.xsetspring.data.Hinge">
+        <constructor-arg value="Bad"/>
+    </bean>
+
+    <bean id="suspension" class="com.xset.my.xsetspring.data.Suspension">
+        <constructor-arg ref="hinge"/>
+    </bean>
+
+    <bean id="differential" class="com.xset.my.xsetspring.data.Differential">
+        <constructor-arg value="Normal"/>
+    </bean>
+
+    <bean id="car" class="com.xset.my.xsetspring.data.Car">
+        <constructor-arg ref="wheel"/>
+        <constructor-arg ref="engine"/>
+        <constructor-arg ref="sparkPlug"/>
+        <constructor-arg ref="accumulator"/>
+        <constructor-arg ref="differential"/>
+        <constructor-arg ref="suspension"/>
+    </bean>
+</beans>
