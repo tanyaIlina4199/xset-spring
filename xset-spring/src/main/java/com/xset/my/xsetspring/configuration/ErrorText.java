@@ -22,7 +22,8 @@ public class ErrorText {
 
     @PostConstruct
     public void initGetAnswer() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/getAnswer.txt"))) {
+        try (InputStream inputStream = getClass().getResourceAsStream("/getAnswer.txt");
+             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
 
             StringBuilder sb = new StringBuilder();
             String line;
@@ -38,7 +39,8 @@ public class ErrorText {
 
     @PostConstruct
     public void initPostAnswer() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/postAnswer.txt"))) {
+        try (InputStream inputStream = getClass().getResourceAsStream("/postAnswer.txt");
+             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
 
             StringBuilder sb = new StringBuilder();
             String line;

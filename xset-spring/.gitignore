@@ -37,3 +37,4 @@ out/
 .vscode/
 **/xset-java
 **/xset-load
+/META-INF
