@@ -1,8 +1,15 @@
 package com.xset.my.xsetspring.data;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Wheel {
 
     private String name;
+
+    public Wheel() {
+        this.name = "Michlenn";
+    }
 
     public Wheel(String name) {
         this.name = name;

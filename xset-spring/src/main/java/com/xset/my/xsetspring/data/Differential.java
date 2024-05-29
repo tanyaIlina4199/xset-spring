@@ -1,8 +1,15 @@
 package com.xset.my.xsetspring.data;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Differential {
 
     private String type;
+
+    public Differential() {
+        this.type = "Normal";
+    }
 
     public Differential(String type) {
         this.type = type;

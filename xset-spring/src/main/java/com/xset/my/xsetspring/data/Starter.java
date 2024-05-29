@@ -1,8 +1,15 @@
 package com.xset.my.xsetspring.data;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Starter {
 
     private String type;
+
+    public Starter() {
+        this.type = "Normal";
+    }
 
     public Starter(String type) {
         this.type = type;

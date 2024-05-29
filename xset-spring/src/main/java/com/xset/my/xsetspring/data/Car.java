@@ -13,16 +13,10 @@ public class Car {
     private Differential differential;
     private Suspension suspension;
 
-    @Autowired
     public Car() {
-        this.wheel = new Wheel("Michlenn");
-        this.engine = new Engine(new Starter("Renault"));
-        this.sparkPlug = new SparkPlug("Spark1");
-        this.differential = new Differential("Normal");
-        this.accumulator = new Accumulator("Super");
-        this.suspension = new Suspension(new Hinge("Good"));
     }
 
+    @Autowired
     public Car(Wheel wheel, Engine engine, SparkPlug sparkPlug, Accumulator accumulator, Differential differential, Suspension suspension) {
         this.wheel = wheel;
         this.engine = engine;
